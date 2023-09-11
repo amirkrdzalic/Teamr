@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Teamr-MyAppDependency-TeamrUITests/Pods-Teamr-MyAppDependency-TeamrUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework

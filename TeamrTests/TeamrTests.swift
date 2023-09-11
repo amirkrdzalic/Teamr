@@ -6,31 +6,38 @@
 //
 
 import XCTest
+import TeamrKit
 @testable import Teamr
 
-class TeamrTests: XCTestCase {
+// MARK: - Read here
+//      Basic tests via "spy" method, testing the main business logic of the repository.
+//      This will assert that the fake data is ensured and correct pathing is tackled.
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class FakeWorker: EmployeeRepositoryType {
+    
+    var isFetchDone: Bool = false
+    
+    func fetch(completion: @escaping (Result<[EmployeeType], DataError>) -> Void) {
+        let fakeData = Employee()
+        isFetchDone = true
+        completion(.success([fakeData]))
     }
+}
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class TeamrModelTests: XCTestCase {
+    
+    func testFetch() {
+        let worker = FakeWorker()
+        
+        worker.fetch { result in
+            switch result {
+            case .success(let fakeData):
+                XCTAssert(worker.isFetchDone)
+                XCTAssert(!fakeData.isEmpty)
+            case .failure(let error):
+                // not testing here so w/e
+                XCTFail()
+            }
         }
     }
-
 }

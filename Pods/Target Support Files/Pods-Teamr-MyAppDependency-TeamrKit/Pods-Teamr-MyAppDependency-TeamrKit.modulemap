@@ -1,0 +1,6 @@
+framework module Pods_Teamr_MyAppDependency_TeamrKit {
+  umbrella header "Pods-Teamr-MyAppDependency-TeamrKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

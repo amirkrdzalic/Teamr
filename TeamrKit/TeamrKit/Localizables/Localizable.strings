@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  TeamrKit
+
+  Created by Amir on 2023-09-11.
+  
+*/
+
+// Standard errors.
+
+"no.internet.error.message" = "No internet connection available.";
+"non.existent.error.message" = "Tried to retrieve non-existent data.";
+"incomplete.error.message" = "Entry is incomplete.";
+"unauthorized.error.message" = "Unauthorized profile error!";
+"timeout.error.message" = "Timeout session error.";
+"parse.failure.error.message" = "Could not parse data error.";
+"database.failure.error.message" = "Database failure error.";
+"cache.failure.error.message" = "Failed to cache data error.";
+"network.failure.error.message" = "Network has failed to connect error.";
+"unknown.reason.error.message" = "Unknown reason error.";
+"field.prefix" = "Field \"%@\"";
