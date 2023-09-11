@@ -1,0 +1,6 @@
+framework module Pods_Teamr {
+  umbrella header "Pods-Teamr-umbrella.h"
+
+  export *
+  module * { export * }
+}
