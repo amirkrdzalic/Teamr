@@ -22,10 +22,10 @@ Employee Directory App for Square - **TEAMR**
 ## What areas of the app did you focus on?
 Many... There is a separate module for the business logic and repository, all protocoled and sealed in different ways, displaying a focus on separating the api logic from the rest of the app.
 Also implemented a shared Pods resource for both modules to have access to the pods.
-Lastly, the main App Teamr is using the TeamrKit for the data, otherwise is very simple UI logic in VIPER architecture to showcase a clean narative of logic separation and cleanliness.
+Lastly, otherwise is very simple UI logic in VIPER architecture to showcase a clean narative of logic separation and cleanliness.
 
 ## What was the reason for your focus? What problems were you trying to solve?
-Not really any problems to solve, more like building a general purpose App. I tried to implement as much reusable UI that has longevity to it. Also longevity is the most important part of the app besides encapsulation, allowing what we change on TeamrKit to be separate from the UI portion. Making this an easy way to allow other team members to edit this code and to really rely on the fact that it will work and not break years down the line.
+Not really any problems to solve, more like building a general purpose App that has longevity. I tried to implement as much reusable UI that has longevity to it. Also longevity is the most important part of the app besides encapsulation, allowing what we change on TeamrKit to be separate from the UI portion. Making this an easy way to allow other team members to edit this code and to really rely on the fact that it will work and not break years down the line.
 
 ## How long did you spend on this project?
 3-4 hours.
@@ -49,3 +49,17 @@ The TeamrKit is more API logic and data driven stuff.
 There are plenty of extensions that I have ported over to help me with mostly minor tasks.
 Not optimzed for iPad.
 Run on DEBUG mode is probably safest, still hitting the end points I was given anyways.
+
+List of some cool patterns, items and architecture used:
+- VIPER
+- Dependency injection via singleton (Swifty version)
+- Cool subscripts and extensions to make life easier
+- Localizables
+- Decoding patterns
+- Decoding errors from headers
+- Error handling and some typical error cases that can arise
+- Request construction
+- API Routing and pathing
+- UI Routing in main app (not really needed...)
+- Separate Module for api logic and data
+- And more!
