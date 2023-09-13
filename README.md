@@ -62,4 +62,5 @@ List of some cool patterns, items and architecture used:
 - API Routing and pathing
 - UI Routing in main app (not really needed...)
 - Separate Module for api logic and data
+- Unit (small but enough) spy method tests
 - And more!
